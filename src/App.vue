@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 import {
   characters,
   error,
@@ -16,9 +16,7 @@ import Modal from "./components/Base/Modal/index.vue";
 
 const searchText = ref(null);
 
-onMounted(() => {
-  getCharacters();
-});
+getCharacters();
 </script>
 
 <template>
