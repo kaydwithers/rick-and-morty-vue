@@ -31,13 +31,7 @@ const handleTheme = (theme: string) => {
 <template>
   <header>
     <label for="search">🔍</label>
-    <input
-      type="text"
-      placeholder="Search"
-      id="search"
-      :value="modelValue"
-      @input="handleInput"
-    />
+    <input type="text" placeholder="Search" id="search" @input="handleInput" />
 
     <button v-if="hasTheme" @click="handleTheme">🌞</button>
     <button v-else @click="handleTheme('dark')">🌚</button>
