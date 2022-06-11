@@ -1,5 +1,4 @@
 import { ref } from "vue";
-
 import { getCharacter } from "./useCharacters";
 
 export const isCharacterModalOpen = ref(false);

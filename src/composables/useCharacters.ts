@@ -1,5 +1,4 @@
 import { ref } from "vue";
-
 import { API_URL } from "../lib/const";
 
 export const character = ref(null);
