@@ -3,7 +3,7 @@ import { ref } from "vue";
 import {
   characters,
   error,
-  getCharacters,
+  getAllCharacters,
   isCharactersLoading,
 } from "./composables/useCharacters";
 import { isCharacterModalOpen } from "./composables/useModals";
@@ -16,7 +16,7 @@ import Modal from "./components/Base/Modal/index.vue";
 
 const searchText = ref(null);
 
-getCharacters();
+getAllCharacters();
 </script>
 
 <template>
@@ -24,7 +24,7 @@ getCharacters();
 
   <Header
     v-model="searchText"
-    @update:modelValue="getCharacters(`?name=${searchText}`)"
+    @update:modelValue="getAllCharacters(`?name=${searchText}`)"
   />
 
   <main>

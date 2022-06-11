@@ -47,7 +47,7 @@ const handleClose = () => {
           <p><strong>Status:</strong> {{ character.status }}</p>
         </div>
 
-        <Episodes :character="character" />
+        <Episodes />
       </div>
     </div>
   </div>

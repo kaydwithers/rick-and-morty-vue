@@ -1,11 +1,8 @@
 <script setup lang="ts">
+import { characterEpisodes } from "@/composables/useCharacters";
 import { ref } from "vue";
 
 import Button from "../Base/Button/index.vue";
-
-defineProps<{
-  character?: object;
-}>();
 
 const isExpanded = ref(false);
 
@@ -24,7 +21,16 @@ const handleAccordion = () => {
 
   <transition name="fade">
     <div class="episodes" v-show="isExpanded">
-      <p>Episodes: {{ character.episode.length }}</p>
+      <p>
+        <strong>Episodes: </strong>
+        <span v-for="(episodeName, index) in characterEpisodes" :key="index">
+          {{
+            index === characterEpisodes.length - 1
+              ? `${episodeName}. `
+              : `${episodeName}, `
+          }}
+        </span>
+      </p>
     </div>
   </transition>
 </template>
