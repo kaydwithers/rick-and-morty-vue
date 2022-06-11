@@ -2,7 +2,7 @@
 import { characterEpisodes } from "@/composables/useCharacters";
 import { ref } from "vue";
 
-import Button from "../Base/Button/index.vue";
+import Button from "@/components/Base/Button/index.vue";
 
 const isExpanded = ref(false);
 

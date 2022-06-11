@@ -3,11 +3,11 @@ import {
   character,
   error,
   isCharacterLoading,
-} from "../../../composables/useCharacters";
-import { closeModals } from "../../../composables/useModals";
+} from "@/composables/useCharacters";
+import { closeModals } from "@/composables/useModals";
 
-import Episodes from "../../Episodes/index.vue";
-import Loading from "../Loading/index.vue";
+import Episodes from "@/components/Episodes/index.vue";
+import Loading from "@/components/Base/Loading/index.vue";
 
 /**
  * Handle the click of the close button.

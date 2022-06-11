@@ -1,20 +1,17 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import {
   characters,
   error,
   getAllCharacters,
   isCharactersLoading,
-} from "./composables/useCharacters";
-import { isCharacterModalOpen } from "./composables/useModals";
+} from "@/composables/useCharacters";
+import { isCharacterModalOpen } from "@/composables/useModals";
 
-import Characters from "./components/Characters/index.vue";
-import Footer from "./components/Base/Footer/index.vue";
-import Header from "./components/Base/Header/index.vue";
-import Loading from "./components/Base/Loading/index.vue";
-import Modal from "./components/Base/Modal/index.vue";
-
-const searchText = ref(null);
+import Characters from "@/components/Characters/index.vue";
+import Footer from "@/components/Base/Footer/index.vue";
+import Header from "@/components/Base/Header/index.vue";
+import Loading from "@/components/Base/Loading/index.vue";
+import Modal from "@/components/Base/Modal/index.vue";
 
 getAllCharacters();
 </script>
@@ -22,10 +19,7 @@ getAllCharacters();
 <template>
   <Modal v-if="isCharacterModalOpen" />
 
-  <Header
-    v-model="searchText"
-    @update:modelValue="getAllCharacters(`?name=${searchText}`)"
-  />
+  <Header />
 
   <main>
     <Loading v-if="isCharactersLoading" />

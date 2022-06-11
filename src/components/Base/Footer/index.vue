@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import {
-  currentPage,
-  getUpdatedPage,
-} from "../../../composables/useCharacters";
+import { currentPage, getUpdatedPage } from "@/composables/useCharacters";
 
 const handleNext = () => {
   getUpdatedPage();

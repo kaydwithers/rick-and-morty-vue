@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { getAllCharacters } from "@/composables/useCharacters";
 
 defineProps<{
   modelValue?: string;
 }>();
-
-const emit = defineEmits(["update:modelValue"]);
 
 const hasTheme = ref(false);
 
@@ -15,7 +14,7 @@ const hasTheme = ref(false);
  * @param {string} event
  */
 const handleInput = (event: string) => {
-  emit("update:modelValue", event.target.value);
+  getAllCharacters(`?name=${event.target.value}`);
 };
 
 /**

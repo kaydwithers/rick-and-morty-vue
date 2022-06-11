@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Character from "./Character.vue";
+import Character from "@/components/Characters/Character.vue";
 
 const props = defineProps<{
   characters?: object;

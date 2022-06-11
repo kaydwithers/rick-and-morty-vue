@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { openCharacterModal } from "../../composables/useModals";
+import { openCharacterModal } from "@/composables/useModals";
 
 const props = defineProps<{
   character?: object;
