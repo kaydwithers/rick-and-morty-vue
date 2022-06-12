@@ -33,8 +33,8 @@ const handleInput = (event: Event) => {
         @input="handleInput"
       />
 
-      <button v-if="theme" @click="setTheme('')">🌞</button>
-      <button v-else @click="setTheme('dark')">🌚</button>
+      <button v-if="theme" @click="setTheme('')" title="Light theme">🌞</button>
+      <button v-else @click="setTheme('dark')" title="Dark theme">🌚</button>
     </nav>
 
     <h1>

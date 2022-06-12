@@ -15,8 +15,8 @@ const handleAccordion = () => {
 </script>
 
 <template>
-  <Button @click="handleAccordion">
-    Episodes <span v-if="isExpanded">⬆</span><span v-else>⬇</span>
+  <Button :aria-expanded="isExpanded" @click="handleAccordion">
+    Episodes <span v-if="isExpanded">☝️</span><span v-else>👇</span>
   </Button>
 
   <transition name="fade">

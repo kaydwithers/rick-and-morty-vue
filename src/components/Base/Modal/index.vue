@@ -18,11 +18,16 @@ const handleClose = () => {
 </script>
 
 <template>
-  <div class="modal">
+  <div
+    class="modal"
+    aria-labelledby="modal-title"
+    aria-modal="true"
+    role="dialog"
+  >
     <div class="modal__overlay" @click="handleClose" />
 
     <div class="modal__content">
-      <button class="close" @click="handleClose">✖</button>
+      <button class="close" title="Close modal" @click="handleClose">✖</button>
 
       <Loading v-if="isCharacterLoading" />
 
@@ -41,7 +46,7 @@ const handleClose = () => {
           </div>
 
           <div class="heading">
-            <h2>{{ character.name }}</h2>
+            <h2 id="modal-title">{{ character.name }}</h2>
           </div>
 
           <div class="paragraph">
