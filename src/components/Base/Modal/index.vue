@@ -36,7 +36,9 @@ const handleClose = () => {
 
       <template v-else>
         <div v-if="character">
-          <img :alt="character.name" :src="character.image" />
+          <div class="image">
+            <img :alt="character.name" :src="character.image" />
+          </div>
 
           <div class="heading">
             <h2>{{ character.name }}</h2>
@@ -106,13 +108,19 @@ const handleClose = () => {
   top: 0;
 }
 
+.modal__content .image {
+  aspect-ratio: 1 / 1;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
 .modal__content img {
   aspect-ratio: 1 / 1;
   border-radius: var(--border-radius);
   object-fit: cover;
-  margin-bottom: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .modal__content .heading {

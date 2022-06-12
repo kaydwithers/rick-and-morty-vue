@@ -1,22 +1,18 @@
 <script setup lang="ts">
-import { characters, getRandomName } from "@/composables/useCharacters";
+import { characters } from "@/composables/useCharacters";
 
 import Character from "@/components/Characters/Character/index.vue";
 </script>
 
 <template>
   <section>
-    <h1>{{ getRandomName() }} &amp; {{ getRandomName() }}</h1>
-
-    <div class="characters">
-      <ul>
-        <Character
-          v-for="character in characters"
-          :key="character.id"
-          :character="character"
-        />
-      </ul>
-    </div>
+    <ul class="characters">
+      <Character
+        v-for="character in characters"
+        :key="character.id"
+        :character="character"
+      />
+    </ul>
   </section>
 </template>
 
@@ -24,13 +20,6 @@ import Character from "@/components/Characters/Character/index.vue";
 .characters {
   background-color: var(--background-color-secondary);
   padding: 4rem 2rem;
-}
-
-h1 {
-  margin-bottom: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  text-align: center;
 }
 
 ul {

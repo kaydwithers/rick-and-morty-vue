@@ -99,16 +99,6 @@ export const getCharacterEpisode = (episode: string) => {
 };
 
 /**
- * Returns a random character name.
- *
- * @returns {string} - The character name.
- */
-export const getRandomName = () => {
-  const index = Math.floor(Math.random() * characters.value.length);
-  return characters.value[index].name;
-};
-
-/**
  * Updates the page.
  */
 export const getUpdatedPage = (subtraction = false) => {
