@@ -19,7 +19,7 @@ export const isCharacterEpisodesLoading = ref(false);
  * @param {string} param - The API url param.
  * @returns {promise}
  */
-export const getAllCharacters = (param = "") => {
+export const getCharacters = (param = "") => {
   isCharactersLoading.value = true;
   error.value = null;
 
@@ -34,7 +34,7 @@ export const getAllCharacters = (param = "") => {
       characters.value = data.results;
     })
     .catch((error) => {
-      console.error(`Failed getAllCharacters(): ${error}`);
+      console.error(`Failed getCharacters(): ${error}`);
       isCharactersLoading.value = false;
       error.value = error;
     });
@@ -59,7 +59,7 @@ export const getCharacter = (characterId: number) => {
     .then((data) => {
       characterEpisodes.value = [];
       data.episode.forEach((episode: string) => {
-        getCharacterEpisodes(episode);
+        getCharacterEpisode(episode);
       });
       isCharacterLoading.value = false;
       character.value = data;
@@ -77,7 +77,7 @@ export const getCharacter = (characterId: number) => {
  * @param {string} episode - The API episode URL.
  * @returns {promise}
  */
-export const getCharacterEpisodes = (episode: string) => {
+export const getCharacterEpisode = (episode: string) => {
   isCharacterEpisodesLoading.value = true;
   error.value = null;
 
@@ -92,7 +92,7 @@ export const getCharacterEpisodes = (episode: string) => {
       characterEpisodes.value.push({ name: data.name });
     })
     .catch((error) => {
-      console.error(`Failed getCharacterEpisodes(): ${error}`);
+      console.error(`Failed getCharacterEpisode(): ${error}`);
       isCharacterEpisodesLoading.value = false;
       error.value = error;
     });
@@ -113,5 +113,5 @@ export const getRandomName = () => {
  */
 export const getUpdatedPage = (subtraction = false) => {
   subtraction ? (currentPage.value -= 1) : (currentPage.value += 1);
-  getAllCharacters(`?page=${currentPage.value}`);
+  getCharacters(`?page=${currentPage.value}`);
 };

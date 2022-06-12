@@ -2,7 +2,7 @@
 import {
   characters,
   error,
-  getAllCharacters,
+  getCharacters,
   isCharactersLoading,
 } from "@/composables/useCharacters";
 import { isCharacterModalOpen } from "@/composables/useModals";
@@ -13,7 +13,7 @@ import Header from "@/components/Base/Header/index.vue";
 import Loading from "@/components/Base/Loading/index.vue";
 import Modal from "@/components/Base/Modal/index.vue";
 
-getAllCharacters();
+getCharacters();
 </script>
 
 <template>

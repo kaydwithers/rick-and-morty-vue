@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getAllCharacters } from "@/composables/useCharacters";
+import { getCharacters } from "@/composables/useCharacters";
 import { setTheme, theme } from "@/composables/useTheme";
 
 defineProps<{
@@ -12,7 +12,7 @@ defineProps<{
  * @param {string} event
  */
 const handleInput = (event: Event) => {
-  getAllCharacters(`?name=${(event.target as HTMLInputElement).value}`);
+  getCharacters(`?name=${(event.target as HTMLInputElement).value}`);
 };
 </script>
 
