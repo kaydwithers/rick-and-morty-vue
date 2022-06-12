@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { characterEpisodes } from "@/composables/useCharacters";
 import { ref } from "vue";
+import { characterEpisodes } from "@/composables/useCharacters";
 
 import Button from "@/components/Base/Button/index.vue";
 
