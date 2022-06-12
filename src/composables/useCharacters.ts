@@ -1,8 +1,12 @@
 import { ref } from "vue";
 import { API_URL } from "@/lib/const";
 
+interface episode {
+  name: string;
+}
+
 export const character = ref(null);
-export const characterEpisodes = ref([]);
+export const characterEpisodes = ref(Array<episode>());
 export const characters = ref([]);
 export const currentPage = ref(1);
 export const error = ref(null);
