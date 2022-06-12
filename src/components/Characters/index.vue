@@ -5,8 +5,8 @@ import Character from "@/components/Characters/Character/index.vue";
 </script>
 
 <template>
-  <section>
-    <ul class="characters">
+  <section class="characters">
+    <ul>
       <Character
         v-for="character in characters"
         :key="character.id"
@@ -28,6 +28,9 @@ ul {
   gap: 2rem;
   grid-auto-flow: row;
   grid-template-columns: repeat(2, 1fr);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90rem;
 }
 
 @media (min-width: 768px) {
@@ -38,7 +41,7 @@ ul {
 
 @media (min-width: 1024px) {
   ul {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -48,7 +51,7 @@ ul {
   }
 
   ul {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 </style>
