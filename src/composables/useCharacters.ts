@@ -17,7 +17,7 @@ export const isCharacterEpisodesLoading = ref(false);
  * Returns a characters API response.
  *
  * @param {string} param - The API url param.
- * @return {promise}
+ * @returns {promise}
  */
 export const getAllCharacters = (param = "") => {
   isCharactersLoading.value = true;
@@ -44,7 +44,7 @@ export const getAllCharacters = (param = "") => {
  * Returns a character API response.
  *
  * @param {number} characterId - The character Id.
- * @return {promise}
+ * @returns {promise}
  */
 export const getCharacter = (characterId: number) => {
   isCharacterLoading.value = true;
@@ -75,7 +75,7 @@ export const getCharacter = (characterId: number) => {
  * Returns the episode name.
  *
  * @param {string} episode - The API episode URL.
- * @return {promise}
+ * @returns {promise}
  */
 export const getCharacterEpisodes = (episode: string) => {
   isCharacterEpisodesLoading.value = true;
@@ -101,7 +101,7 @@ export const getCharacterEpisodes = (episode: string) => {
 /**
  * Returns a random character name.
  *
- * @return {string} - The character name.
+ * @returns {string} - The character name.
  */
 export const getRandomName = () => {
   const index = Math.floor(Math.random() * characters.value.length);
