@@ -8,10 +8,8 @@ import { setTheme, theme } from "@/composables/useTheme";
  * @returns {string} - The character name.
  */
 const getRandomName = () => {
-  if (characters.value.length) {
-    const index = Math.floor(Math.random() * characters.value.length);
-    return characters.value[index].name;
-  }
+  const index = Math.floor(Math.random() * characters.value.length);
+  return characters.value[index].name;
 };
 
 /**
@@ -26,7 +24,7 @@ const handleInput = (event: Event) => {
 
 <template>
   <header>
-    <div>
+    <nav>
       <label for="search">🔍</label>
       <input
         type="text"
@@ -37,19 +35,28 @@ const handleInput = (event: Event) => {
 
       <button v-if="theme" @click="setTheme('')">🌞</button>
       <button v-else @click="setTheme('dark')">🌚</button>
-    </div>
+    </nav>
 
-    <h1>{{ getRandomName() }} &amp; {{ getRandomName() }}</h1>
+    <h1>
+      <span v-if="characters.length">
+        {{ getRandomName() }} &amp; {{ getRandomName() }}
+      </span>
+      <span v-else>Rick &amp; Morty</span>
+    </h1>
   </header>
 </template>
 
 <style scoped>
 header {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 4rem 1rem;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 label {

@@ -36,8 +36,8 @@ const handleAccordion = () => {
 </template>
 
 <style scoped>
-button {
-  margin-bottom: 2rem;
+p {
+  margin-top: 2rem;
 }
 
 .fade-enter-active,

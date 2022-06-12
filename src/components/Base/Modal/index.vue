@@ -91,8 +91,13 @@ const handleClose = () => {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
   min-height: 50%;
-  padding: 4rem 2rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 4rem;
   position: relative;
   text-align: center;
   width: 100%;
@@ -113,7 +118,7 @@ const handleClose = () => {
   margin-bottom: 1.5rem;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 60%;
 }
 
 .modal__content img {
@@ -135,10 +140,6 @@ const handleClose = () => {
   margin-bottom: 0.5rem;
 }
 
-.modal__content button {
-  margin-bottom: 2rem;
-}
-
 @media (min-width: 768px) {
   .modal__content {
     margin-left: 2rem;
@@ -153,6 +154,10 @@ const handleClose = () => {
 
   .modal__content .close {
     padding: 2rem;
+  }
+
+  .modal__content .image {
+    width: 40%;
   }
 }
 </style>
