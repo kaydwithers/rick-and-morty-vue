@@ -1,14 +1,10 @@
 <script setup lang="ts">
 import { openCharacterModal } from "@/composables/useModals";
 
-interface inter {
-  id: number;
-  image: string;
-  name: string;
-}
+import type { CharacterInterface } from "@/interfaces/characterInterface";
 
 const props = defineProps<{
-  character: inter;
+  character: CharacterInterface;
 }>();
 
 /**

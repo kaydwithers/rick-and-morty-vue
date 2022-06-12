@@ -34,21 +34,23 @@ const handleClose = () => {
         No matching character found.
       </p>
 
-      <div v-else>
-        <img :alt="character.name" :src="character.image" />
+      <template v-else>
+        <div v-if="character">
+          <img :alt="character.name" :src="character.image" />
 
-        <div class="heading">
-          <h2>{{ character.name }}</h2>
+          <div class="heading">
+            <h2>{{ character.name }}</h2>
+          </div>
+
+          <div class="paragraph">
+            <p><strong>Species:</strong> {{ character.species }}</p>
+            <p><strong>Location:</strong> {{ character.location.name }}</p>
+            <p><strong>Status:</strong> {{ character.status }}</p>
+          </div>
+
+          <Episodes />
         </div>
-
-        <div class="paragraph">
-          <p><strong>Species:</strong> {{ character.species }}</p>
-          <p><strong>Location:</strong> {{ character.location.name }}</p>
-          <p><strong>Status:</strong> {{ character.status }}</p>
-        </div>
-
-        <Episodes />
-      </div>
+      </template>
     </div>
   </div>
 </template>

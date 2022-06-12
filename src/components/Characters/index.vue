@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CharacterInterface } from "@/composables/useCharacters";
+import type { CharacterInterface } from "@/interfaces/characterInterface";
 
 import Character from "@/components/Characters/Character/index.vue";
 
