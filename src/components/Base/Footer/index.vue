@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { currentPage, getUpdatedPage } from "@/composables/useCharacters";
 
+/**
+ * Handle the click of the right arrow.
+ */
 const handleNext = () => {
   getUpdatedPage();
 };
 
+/**
+ * Handle the click of the left arrow.
+ */
 const handlePrevious = () => {
   getUpdatedPage(true);
 };
