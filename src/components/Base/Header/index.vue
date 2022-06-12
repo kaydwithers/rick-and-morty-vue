@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { getAllCharacters } from "@/composables/useCharacters";
+import { setTheme, theme } from "@/composables/useTheme";
 
 defineProps<{
   modelValue?: string;
 }>();
-
-const hasTheme = ref(false);
 
 /**
  * Handle the input value.
@@ -16,16 +14,6 @@ const hasTheme = ref(false);
 const handleInput = (event: Event) => {
   getAllCharacters(`?name=${(event.target as HTMLInputElement).value}`);
 };
-
-/**
- * Handle the click of the theme buttons.
- *
- * @param {string} theme - The theme to add.
- */
-const handleTheme = (theme: string) => {
-  hasTheme.value = !hasTheme.value;
-  theme ? (document.body.className = theme) : (document.body.className = "");
-};
 </script>
 
 <template>
@@ -33,8 +21,8 @@ const handleTheme = (theme: string) => {
     <label for="search">🔍</label>
     <input type="text" placeholder="Search" id="search" @input="handleInput" />
 
-    <button v-if="hasTheme" @click="handleTheme('')">🌞</button>
-    <button v-else @click="handleTheme('dark')">🌚</button>
+    <button v-if="theme" @click="setTheme('')">🌞</button>
+    <button v-else @click="setTheme('dark')">🌚</button>
   </header>
 </template>
 
