@@ -23,11 +23,11 @@ const handleAccordion = () => {
     <div class="episodes" v-show="isExpanded">
       <p>
         <strong>Episodes: </strong>
-        <span v-for="(episodeName, index) in characterEpisodes" :key="index">
+        <span v-for="(episode, index) in characterEpisodes" :key="index">
           {{
             index === characterEpisodes.length - 1
-              ? `${episodeName}. `
-              : `${episodeName}, `
+              ? `${episode.name}. `
+              : `${episode.name}, `
           }}
         </span>
       </p>

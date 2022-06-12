@@ -86,7 +86,7 @@ export function getCharacterEpisodes(episode: string) {
     })
     .then((data) => {
       isCharacterEpisodesLoading.value = false;
-      characterEpisodes.value.push(data.name);
+      characterEpisodes.value.push({ name: data.name });
     })
     .catch((error) => {
       console.error(`Failed getCharacterEpisodes(): ${error}`);
