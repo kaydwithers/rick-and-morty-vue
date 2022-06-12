@@ -13,9 +13,9 @@ export function closeModals() {
 /**
  * Opens the character modal.
  *
- * @param {String} characterId - The id of the character.
+ * @param {number} characterId - The id of the character.
  */
-export function openCharacterModal(characterId: string) {
+export function openCharacterModal(characterId: number) {
   getCharacter(characterId);
   isCharacterModalOpen.value = true;
 }
