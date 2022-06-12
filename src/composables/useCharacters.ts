@@ -55,7 +55,7 @@ export function getCharacter(characterId: number) {
     })
     .then((data) => {
       characterEpisodes.value = [];
-      data.episode.forEach((episode) => {
+      data.episode.forEach((episode: string) => {
         getCharacterEpisodes(episode);
       });
       isCharacterLoading.value = false;
