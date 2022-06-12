@@ -3,6 +3,7 @@ interface LocationInterface {
 }
 
 export interface CharacterInterface {
+  episode: Array<string>;
   id: number;
   image: string;
   location: LocationInterface;

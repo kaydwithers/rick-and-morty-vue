@@ -25,9 +25,9 @@ const handleAccordion = () => {
         <strong>Episodes: </strong>
         <span v-for="(episode, index) in characterEpisodes" :key="index">
           {{
-            index === characterEpisodes.length - 1
-              ? `${episode.name}. `
-              : `${episode.name}, `
+            `${episode.name}${
+              index === characterEpisodes.length - 1 ? `.` : `, `
+            }`
           }}
         </span>
       </p>
