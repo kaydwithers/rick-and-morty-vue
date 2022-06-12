@@ -3,6 +3,7 @@ import Character from "@/components/Characters/Character/index.vue";
 
 interface inter {
   id: number;
+  image: string;
   name: string;
 }
 
