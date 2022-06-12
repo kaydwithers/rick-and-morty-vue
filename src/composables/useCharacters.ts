@@ -1,13 +1,19 @@
 import { ref } from "vue";
 import { API_URL } from "@/lib/const";
 
-interface episode {
+export interface CharacterInterface {
+  id: number;
+  image: string;
   name: string;
 }
 
-export const character = ref(null);
-export const characterEpisodes = ref(Array<episode>());
-export const characters = ref([]);
+interface EpisodeInterface {
+  name: string;
+}
+
+export const character = ref<CharacterInterface>();
+export const characterEpisodes = ref(Array<EpisodeInterface>());
+export const characters = ref(Array<CharacterInterface>());
 export const currentPage = ref(1);
 export const error = ref(null);
 export const isCharacterLoading = ref(false);

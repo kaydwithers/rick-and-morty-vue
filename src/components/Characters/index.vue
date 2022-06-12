@@ -1,14 +1,10 @@
 <script setup lang="ts">
+import type { CharacterInterface } from "@/composables/useCharacters";
+
 import Character from "@/components/Characters/Character/index.vue";
 
-interface inter {
-  id: number;
-  image: string;
-  name: string;
-}
-
 const props = defineProps<{
-  characters: Array<inter>;
+  characters: Array<CharacterInterface>;
 }>();
 
 /**
