@@ -1,6 +1,6 @@
 # rick-and-morty-vue
 
-Rick and Morty API made with Vue 3 script setup with TypeScript.
+Rick and Morty API made with Vue 3 script setup, TypeScript and Vite.
 
 ## Project Setup
 
