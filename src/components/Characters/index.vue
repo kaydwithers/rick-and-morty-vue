@@ -1,8 +1,13 @@
 <script setup lang="ts">
 import Character from "@/components/Characters/Character/index.vue";
 
+interface inter {
+  id: number;
+  name: string;
+}
+
 const props = defineProps<{
-  characters?: object;
+  characters: Array<inter>;
 }>();
 
 /**
