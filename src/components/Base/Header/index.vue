@@ -33,7 +33,7 @@ const handleTheme = (theme: string) => {
     <label for="search">🔍</label>
     <input type="text" placeholder="Search" id="search" @input="handleInput" />
 
-    <button v-if="hasTheme" @click="handleTheme">🌞</button>
+    <button v-if="hasTheme" @click="handleTheme('')">🌞</button>
     <button v-else @click="handleTheme('dark')">🌚</button>
   </header>
 </template>
