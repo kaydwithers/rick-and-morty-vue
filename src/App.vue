@@ -37,7 +37,7 @@ getCharacters();
       No characters found.
     </p>
 
-    <Characters v-else :characters="characters" />
+    <Characters v-else />
   </main>
 
   <Footer />
