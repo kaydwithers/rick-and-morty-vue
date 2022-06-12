@@ -13,8 +13,8 @@ const hasTheme = ref(false);
  *
  * @param {string} event
  */
-const handleInput = (event: string) => {
-  getAllCharacters(`?name=${event.target.value}`);
+const handleInput = (event: Event) => {
+  getAllCharacters(`?name=${(event.target as HTMLInputElement).value}`);
 };
 
 /**
