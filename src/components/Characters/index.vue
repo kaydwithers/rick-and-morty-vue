@@ -1,26 +1,12 @@
 <script setup lang="ts">
-import type { CharacterInterface } from "@/interfaces/characterInterface";
+import { characters, getRandomName } from "@/composables/useCharacters";
 
 import Character from "@/components/Characters/Character/index.vue";
-
-const props = defineProps<{
-  characters: Array<CharacterInterface>;
-}>();
-
-/**
- * Returns a random character name.
- *
- * @return {String}
- */
-const randomName = (): string => {
-  const index = Math.floor(Math.random() * props.characters.length);
-  return props.characters[index].name;
-};
 </script>
 
 <template>
   <section>
-    <h1>{{ randomName() }} &amp; {{ randomName() }}</h1>
+    <h1>{{ getRandomName() }} &amp; {{ getRandomName() }}</h1>
 
     <div class="characters">
       <ul>
