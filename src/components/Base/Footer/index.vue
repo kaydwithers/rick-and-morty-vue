@@ -19,12 +19,14 @@ const handlePrevious = () => {
 <template>
   <footer>
     <button :disabled="currentPage <= 1" @click="handlePrevious">⬅</button>
+    <p>{{ currentPage }}</p>
     <button @click="handleNext">➡</button>
   </footer>
 </template>
 
 <style scoped>
 footer {
+  align-items: center;
   display: flex;
   justify-content: center;
   margin-top: auto;
