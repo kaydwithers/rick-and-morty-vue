@@ -39,9 +39,9 @@ const handleInput = (event: Event) => {
 
     <h1>
       <span v-if="characters.length">
-        {{ getRandomName() }} &amp; {{ getRandomName() }}
+        {{ getRandomName() }} and {{ getRandomName() }}
       </span>
-      <span v-else>Rick &amp; Morty</span>
+      <span v-else>Rick and Morty</span>
     </h1>
   </header>
 </template>
