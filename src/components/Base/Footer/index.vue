@@ -19,6 +19,7 @@ const handlePrevious = () => {
 <template>
   <footer>
     <button
+      aria-label="Previous page"
       :disabled="currentPage <= 1"
       title="Previous page"
       @click="handlePrevious"
@@ -26,7 +27,9 @@ const handlePrevious = () => {
       👈
     </button>
     <p>{{ currentPage }}</p>
-    <button title="Next page" @click="handleNext">👉</button>
+    <button aria-label="Next page" title="Next page" @click="handleNext">
+      👉
+    </button>
   </footer>
 </template>
 

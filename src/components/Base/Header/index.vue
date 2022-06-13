@@ -33,8 +33,22 @@ const handleInput = (event: Event) => {
         @input="handleInput"
       />
 
-      <button v-if="theme" @click="setTheme('')" title="Light theme">🌞</button>
-      <button v-else @click="setTheme('dark')" title="Dark theme">🌚</button>
+      <button
+        v-if="theme"
+        @click="setTheme('')"
+        aria-label="Light theme"
+        title="Light theme"
+      >
+        🌞
+      </button>
+      <button
+        v-else
+        @click="setTheme('dark')"
+        aria-label="Dark theme"
+        title="Dark theme"
+      >
+        🌚
+      </button>
     </nav>
 
     <h1>
@@ -69,7 +83,6 @@ input {
   border-radius: 0.5rem;
   border-style: solid;
   border-width: 2px;
-  font-size: 1rem;
   padding: 1rem;
   width: auto;
 }

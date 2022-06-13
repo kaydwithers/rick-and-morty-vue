@@ -120,15 +120,17 @@ const handleClose = () => {
 
 .modal__content .image {
   aspect-ratio: 1 / 1;
+  background-color: var(--background-color-tertiary);
+  border-radius: var(--border-radius);
   margin-bottom: 1.5rem;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
   width: 60%;
 }
 
 .modal__content img {
   aspect-ratio: 1 / 1;
-  border-radius: var(--border-radius);
   object-fit: cover;
   width: 100%;
 }

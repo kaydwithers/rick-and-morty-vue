@@ -1,6 +1,7 @@
 :root {
   --background-color-primary: #fff;
   --background-color-secondary: #000;
+  --background-color-tertiary: #f2f2f2;
   --background-color-accent: #0084ff;
   --border-radius: 1rem;
   --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -11,6 +12,7 @@
 .dark {
   --background-color-primary: #181818;
   --background-color-secondary: #000;
+  --background-color-tertiary: #333;
   --background-color-accent: #ff4f00;
   --color: #fff;
 }
@@ -49,6 +51,7 @@ h2 {
   font-size: 2rem;
 }
 
+input,
 p {
   font-size: 1rem;
 }
@@ -81,6 +84,7 @@ input:focus {
     font-size: 2.5rem;
   }
 
+  input,
   p {
     font-size: 1.25rem;
   }

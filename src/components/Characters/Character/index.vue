@@ -17,7 +17,7 @@ const handleCharacterSelect = () => {
 
 <template>
   <li class="character">
-    <button @click="handleCharacterSelect">
+    <button role="button" @click="handleCharacterSelect">
       <img :alt="character.name" :src="character.image" />
       <p>{{ character.name }}</p>
     </button>
