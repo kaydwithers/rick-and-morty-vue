@@ -27,7 +27,14 @@ const handleClose = () => {
     <div class="modal__overlay" @click="handleClose" />
 
     <div class="modal__content">
-      <button class="close" title="Close modal" @click="handleClose">✖</button>
+      <button
+        class="close"
+        aria-label="Close modal"
+        title="Close modal"
+        @click="handleClose"
+      >
+        ✖
+      </button>
 
       <Loading v-if="isCharacterLoading" />
 
