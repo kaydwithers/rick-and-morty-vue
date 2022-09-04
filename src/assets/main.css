@@ -74,18 +74,3 @@ img {
 input:focus {
   outline: 0;
 }
-
-@media (min-width: 1280px) {
-  h1 {
-    font-size: 4rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  input,
-  p {
-    font-size: 1.25rem;
-  }
-}

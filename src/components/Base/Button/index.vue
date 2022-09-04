@@ -8,9 +8,9 @@
 button {
   background-color: var(--background-color-accent);
   border-radius: var(--border-radius);
-  color: #000;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 1rem 2rem;
+  color: white;
   transition-duration: 300ms;
   transition-property: transform;
 }
