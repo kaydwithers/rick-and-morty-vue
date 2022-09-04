@@ -1,7 +1,7 @@
 import { ref } from "vue";
 import { useCharacters } from "./useCharacters";
 
-const { getCharacter } = useCharacters();
+const { character, characters } = useCharacters();
 
 const isCharacterModalOpen = ref(false);
 
@@ -19,7 +19,10 @@ export const useModals = () => {
    * @param {number} characterId - The id of the character.
    */
   const openCharacterModal = (characterId: number) => {
-    getCharacter(characterId);
+    character.value = characters.value.find(
+      (character) => character.id === characterId
+    );
+
     isCharacterModalOpen.value = true;
   };
 
