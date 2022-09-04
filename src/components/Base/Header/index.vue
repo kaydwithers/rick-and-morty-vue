@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
 import { useCharacters } from "@/composables/useCharacters";
 import { useTheme } from "@/composables/useTheme";
 
 const { characters, getCharacters } = useCharacters();
 const { setTheme, theme } = useTheme();
+
+const isThrottling = ref(false);
 
 /**
  * Returns a random character name.
@@ -21,7 +25,15 @@ const getRandomName = () => {
  * @param {string} event
  */
 const handleInput = (event: Event) => {
-  getCharacters(`?name=${(event.target as HTMLInputElement).value}`);
+  if (isThrottling.value) return;
+
+  isThrottling.value = true;
+
+  setTimeout(() => {
+    isThrottling.value = false;
+
+    getCharacters(`?name=${(event.target as HTMLInputElement).value}`);
+  }, 600);
 };
 </script>
 
