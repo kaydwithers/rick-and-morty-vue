@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { currentPage, getUpdatedPage } from "@/composables/useCharacters";
+import { useCharacters } from "@/composables/useCharacters";
+
+const { currentPage, getUpdatedPage } = useCharacters();
 
 /**
  * Handle the click of the right arrow.

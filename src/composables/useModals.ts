@@ -1,21 +1,31 @@
 import { ref } from "vue";
-import { getCharacter } from "./useCharacters";
+import { useCharacters } from "./useCharacters";
 
-export const isCharacterModalOpen = ref(false);
+const { getCharacter } = useCharacters();
 
-/**
- * Closes the modal.
- */
-export const closeModals = () => {
-  isCharacterModalOpen.value = false;
-};
+const isCharacterModalOpen = ref(false);
 
-/**
- * Opens the character modal.
- *
- * @param {number} characterId - The id of the character.
- */
-export const openCharacterModal = (characterId: number) => {
-  getCharacter(characterId);
-  isCharacterModalOpen.value = true;
+export const useModals = () => {
+  /**
+   * Closes the modal.
+   */
+  const closeModals = () => {
+    isCharacterModalOpen.value = false;
+  };
+
+  /**
+   * Opens the character modal.
+   *
+   * @param {number} characterId - The id of the character.
+   */
+  const openCharacterModal = (characterId: number) => {
+    getCharacter(characterId);
+    isCharacterModalOpen.value = true;
+  };
+
+  return {
+    closeModals,
+    isCharacterModalOpen,
+    openCharacterModal,
+  };
 };

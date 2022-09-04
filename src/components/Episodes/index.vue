@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { characterEpisodes } from "@/composables/useCharacters";
+import { useCharacters } from "@/composables/useCharacters";
 
 import Button from "@/components/Base/Button/index.vue";
+
+const { characterEpisodes } = useCharacters();
 
 const isExpanded = ref(false);
 
@@ -37,6 +39,7 @@ const handleAccordion = () => {
 
 <style scoped>
 p {
+  font-size: 12px;
   margin-top: 2rem;
 }
 

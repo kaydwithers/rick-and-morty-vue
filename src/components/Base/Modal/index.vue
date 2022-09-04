@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import {
-  character,
-  error,
-  isCharacterLoading,
-} from "@/composables/useCharacters";
-import { closeModals } from "@/composables/useModals";
+import { useCharacters } from "@/composables/useCharacters";
+import { useModals } from "@/composables/useModals";
 
 import Episodes from "@/components/Episodes/index.vue";
 import Loading from "@/components/Base/Loading/index.vue";
+
+const { character, error, isCharacterLoading } = useCharacters();
+const { closeModals } = useModals();
 
 /**
  * Handle the click of the close button.

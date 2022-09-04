@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { characters } from "@/composables/useCharacters";
+import { useCharacters } from "@/composables/useCharacters";
 
 import Character from "@/components/Characters/Character/index.vue";
+
+const { characters } = useCharacters();
 </script>
 
 <template>

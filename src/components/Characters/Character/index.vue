@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { openCharacterModal } from "@/composables/useModals";
+import { useModals } from "@/composables/useModals";
 
 import type { CharacterInterface } from "@/interfaces/characterInterface";
 
 const props = defineProps<{
   character: CharacterInterface;
 }>();
+
+const { openCharacterModal } = useModals();
 
 /**
  * Handle the click of a character selection.

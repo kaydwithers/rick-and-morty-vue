@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import {
-  characters,
-  error,
-  getCharacters,
-  isCharactersLoading,
-} from "@/composables/useCharacters";
-import { isCharacterModalOpen } from "@/composables/useModals";
+import { useCharacters } from "@/composables/useCharacters";
+import { useModals } from "@/composables/useModals";
 
 import Characters from "@/components/Characters/index.vue";
 import Footer from "@/components/Base/Footer/index.vue";
 import Header from "@/components/Base/Header/index.vue";
 import Loading from "@/components/Base/Loading/index.vue";
 import Modal from "@/components/Base/Modal/index.vue";
+
+const { characters, error, getCharacters, isCharactersLoading } =
+  useCharacters();
+
+const { isCharacterModalOpen } = useModals();
 
 getCharacters();
 </script>

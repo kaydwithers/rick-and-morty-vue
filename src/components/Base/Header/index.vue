@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { characters, getCharacters } from "@/composables/useCharacters";
-import { setTheme, theme } from "@/composables/useTheme";
+import { useCharacters } from "@/composables/useCharacters";
+import { useTheme } from "@/composables/useTheme";
+
+const { characters, getCharacters } = useCharacters();
+const { setTheme, theme } = useTheme();
 
 /**
  * Returns a random character name.
